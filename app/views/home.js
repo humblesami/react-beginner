@@ -2,7 +2,8 @@ import React from 'react';
 
   const MyHomeWithAnyName = () => (
     <div>
-      <h2>Home With const anonymous function and encapsulated component name</h2>
+      <link href="./assets/css/home-style.css" rel="stylesheet" />
+      <h2>Home With const anonymous function and encapsulated component name</h2>      
     </div>
   );  
   

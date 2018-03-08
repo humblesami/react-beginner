@@ -12,8 +12,7 @@ const config = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './main.js',
-    './assets/scss/main.scss',
+    './main.js'
   ],
 
   output: {
@@ -39,23 +38,6 @@ const config = {
           'babel-loader',
         ],
         exclude: /node_modules/,
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            {
-              loader: 'sass-loader',
-              query: {
-                sourceMap: false,
-              },
-            },
-          ],
-          publicPath: '../'
-        }),
       },
       {
         test: /\.(png|jpg|gif)$/,
