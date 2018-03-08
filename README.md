@@ -1,15 +1,6 @@
 # ReactJs for Beginners
-Being a beginner to react, I faced losts of difficulty to find/run a simple react tutorial for beginner.
-I managed to run my first simple app from https://github.com/arqex/react-router-boilerplate
-I simplified it for me and you, excluding the complex things like eslint which I still have to learn.
-I am sharing it for you.
 
-This application contains
-1. Simple routing => /home, /about etc
-2. nested-routes and views like /topics/components, /topics/props-v-state
-3. Ajax request for communication with server
-4. Data binding i.e. js to html using setState function
-5. Simple css files one for all application and other for home page
+	How To Run
 
 Install nodejs from https://nodejs.org/en/download/ (if you do not have already)
 
@@ -25,9 +16,25 @@ Give following two commands
 
 Open browser and open this link http://localhost:8080 (You would see it working) and That's it
 
+	
+	Target Audience
 
-Coding Guide for making changes (Its incomplete yet) Highlights
+Being a beginner to react, I faced losts of difficulty to find/run a simple react tutorial for beginner.
+I managed to run my first simple app from https://github.com/arqex/react-router-boilerplate
+I simplified it for me and you, excluding the complex things like eslint which I still have to learn.
+I am sharing it for you.
 
+
+	This application contains
+
+1. Simple routing => /home, /about etc
+2. nested-routes and views like /topics/components, /topics/props-v-state
+3. Ajax request for communication with server
+4. Data binding i.e. js to html using setState function
+5. Simple css files one for all application and other for home page
+
+
+	Coding Guide for making changes (Its incomplete yet) Highlights
 
 Being beginner you only need to interact only with two folders
 1. html
