@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <title>ReactJS Routo</title>
     <link href="./styles/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./jquery-3.3.1.js"></script>
 </head>
 <body>
-    <div id='header_dt'></div>
+    <header>Head</header>
+    <hr/>
+    <div>Datetime will be displayed here</div>
     <script>
-        document.getElementById('header_dt').innerHTML = new Date();
+        $('div').first().html(new Date());
     </script>
-    <div id="links"></div>
-    <div id="rootoo"></div>
+    <div id="any_container_for_react"></div>
     <script type="text/javascript" src="bundle.js"></script>
+    <hr/>
+    <footer>Foot</footer>
 </body>
 </html>

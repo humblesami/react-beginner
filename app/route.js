@@ -1,12 +1,10 @@
+import React from 'react';
 import Home from './views/home';
-import Topicter from './views/topic';
-import React, { Component } from 'react';
-import {about2 ,about1, about3} from './views/aboutus';
+import Topics from './views/topic';
+import {about2 ,about1} from './views/aboutus';
 import { Link, BrowserRouter, Route } from 'react-router-dom';
 
-
-
-  var linko = (    
+  var CompleteViewToBeLoadedInOneConatinerFromReact = (    
     <BrowserRouter>
       <div>
         <ul>
@@ -14,10 +12,10 @@ import { Link, BrowserRouter, Route } from 'react-router-dom';
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/about">About with fun</Link>
           </li>
           <li>
-            <Link to="/aboutwithclass">About with Function</Link>
+            <Link to="/aboutclass">About with Calss</Link>
           </li>
           <li>
             <Link to="/topics">Topics</Link>
@@ -25,13 +23,11 @@ import { Link, BrowserRouter, Route } from 'react-router-dom';
         </ul>      
         <Route exact path="/" component={Home.a} />
         <Route path="/about" component={about1} />
-        <Route path="/aboutwithclass" component={about2} />
-        <Route path="/topics" component={Topicter} />  
+        <Route path="/aboutclass" component={about2} />
+        <Route path="/topics" component={Topics} />  
       </div>
     </BrowserRouter>
     
   );
 
-  export {
-    linko
-  }
+  export default CompleteViewToBeLoadedInOneConatinerFromReact ;

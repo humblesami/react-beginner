@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 
-const Topics = ({ match }) => (
+function Topics ({ match }){ 
+  return(
     <div>
       <h2>Topic us</h2>
       <ul>
@@ -19,11 +20,15 @@ const Topics = ({ match }) => (
       <Route exact path={match.url} render={() => <h3>Please select a topic.</h3>}/>
     </div>
   );
+}
   
-  const Topic = ({ match }) => (
-    <div>
-      <h3>{match.params.topicId}</h3>
-    </div>
-  );
+  function Topic ({ match }) 
+  {
+    return(
+      <div>
+        <h3>{match.params.topicId}</h3>
+      </div>
+    );
+  } 
 
   export default Topics;
