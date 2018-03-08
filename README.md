@@ -34,6 +34,7 @@ Being beginner you only need to interact only with two folders 1.html and 2. App
 html is a simple folder contains index.html and assets folder
 
 2. In app you need to do the most only with main.js (Main file of our react-app) and views folder
+Home.js is a simple react component which returns a view
 
 I will keep posting the details of coding
 
