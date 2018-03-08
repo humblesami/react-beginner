@@ -1,11 +1,15 @@
 import React from 'react';
 
-  const MyHomeWithAnyName = () => (
-    <div>
-      <link href="./assets/css/home-style.css" rel="stylesheet" />
-      <h2>Home With const anonymous function and encapsulated component name</h2>      
-    </div>
-  );  
+  function MyHomeWithAnyName() {
+    return (
+      <div>
+        <link href="./assets/css/home-style.css" rel="stylesheet" />
+        <h2>Home With simple function returing html using react</h2>      
+      </div>
+    );
+  }
   
+  export default  MyHomeWithAnyName;
 
-  export default {a : MyHomeWithAnyName};
+  // instaed of above you can also return like
+  //export default { keyname :  MyHomeWithAnyName}

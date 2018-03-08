@@ -2,9 +2,9 @@ import React from 'react';
 import Component from 'react';
 import { render } from 'react-dom';
   
-  function about1() {
-    return (<h1>About with simple fun</h1>);
-  };
+  const about1 = () => (
+    <h1>About with const_keyword, auto returing html</h1>
+  );
 
   class about2 extends React.Component {
 

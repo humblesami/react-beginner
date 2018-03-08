@@ -52,10 +52,6 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-2": "6.24.1",            
     
-    "css-loader": "0.28.10",
-    "node-sass": "4.7.2",
-    "sass-loader": "6.0.7",
-    "style-loader": "0.20.0",
     "url-loader": "0.6.2",
     "file-loader": "1.1.7",
     
