@@ -29,11 +29,13 @@ Open browser and open this link http://localhost:8080 (You would see it working)
 Coding Guide for making changes (Its incomplete yet) Highlights
 
 
-Being beginner you only need to interact only with two folders 1.html and 2. App
+Being beginner you only need to interact only with two folders
+1. html
+2. App
 
-html is a simple folder contains index.html and assets folder
+html is a simple folder contains index.html and assets/css folder
 
-2. In app you need to do the most only with main.js (Main file of our react-app) and views folder
+In app folder you need to do the most only with main.js (Main file of our react-app) and views folder
 Home.js is a simple react component which returns a view
 
 I will keep posting the details of coding
