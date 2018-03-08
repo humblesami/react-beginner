@@ -31,10 +31,11 @@ I am sharing it for you.
 2. nested-routes and views like /topics/components, /topics/props-v-state
 3. Ajax request for communication with server
 4. Data binding i.e. js to html using setState function
-5. Simple css files one for all application and other for home page
+5. Simple css files one for all application and other for home page	
 
 
 	Coding Guide for making changes (Its incomplete yet) Highlights
+
 
 Being beginner you only need to interact only with two folders
 1. html
