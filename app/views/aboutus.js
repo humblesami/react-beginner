@@ -45,13 +45,13 @@ import { render } from 'react-dom';
     render(){
       return (
         <div>
-          <button onClick={this.onItemClick} >Click to Call AJAX</button>
+          <button className="ajax-btn" onClick={this.onItemClick} >Click to Call AJAX</button>          
           <div>Property of class not chnagable by setstate {this.mahi}</div>
           <div>{this.simplefun()}</div>
           <div>later_created_property_in_state :{this.state.later_created_property}</div>
           <div>Property of state :     
               <span className="service-result">{this.state.service_response}</span>              
-          </div>
+          </div>          
         </div>
       );
     }      
