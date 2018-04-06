@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ReactJS Routoa</title>        
-    <script>var dn_base_url = 'http://localhost:8080';</script>    
-    <script src="http://localhost:8080/assets/jquery-3.3.1.js"></script>
+    <title>ReactJS Routoa</title>
+    <script src="http://localhost:9000/assets/jquery-3.3.1.js"></script>
+    
 </head>
-<body>        
+<body>    
+    <div class="time"></div>    
     <div id="react_dom_container">Dil-e-be khabar</div>    
-    <script type="text/javascript" src="http://localhost:8080/bundle.js"></script>        
+    <script type="text/javascript" src="http://localhost:9000/bundle.js"></script> 
+    <script type="text/javascript">
+        $('div.time').html(new Date());
+    </script>       
 </body>
 </html>

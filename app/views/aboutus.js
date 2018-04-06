@@ -15,16 +15,13 @@ import { render } from 'react-dom';
     }
      
     onItemClick = (e) => {
-      var obj = this;
-      $.ajax({
-        url: "https://maps.googleapis.com/maps/api/geocode/json?address=lahore",
-        success:function(data){  
-          data = data.results;
-          this.mahi = 800;
-          data = JSON.stringify(data);
-          obj.setState({locs:data, later_created_property:'Orval'})
-        }
-      });
+        var obj = this;        
+        ws_request('test',{},function(data){  
+            data = data.results;
+            obj.mahi = 800;
+            data = JSON.stringify(data);
+            obj.setState({locs:data, later_created_property:'Orval'});
+        });
     }
 
     simplefun = function(){      
