@@ -11,21 +11,35 @@ import { render } from 'react-dom';
     constructor() {
       super();
       this.mahi = 56;
-      this.state = {locs : 'Sami', unused_attr : 98};
+      this.servie_url = "test";
+      this.state = {service_response : 'Not received', unused_attr : 98};
     }
      
     onItemClick = (e) => {
-        var obj = this;        
-        ws_request('test',{},function(data){  
-            data = data.results;
+        var obj = this; 
+        
+        ws_request(obj.servie_url,{},function(data){  
+            if(data.results)
+            {
+                data = data.results;
+                data = JSON.stringify(data);
+            }            
             obj.mahi = 800;
-            data = JSON.stringify(data);
-            obj.setState({locs:data, later_created_property:'Orval'});
+            data = "At "+(new Date()) + " : "+data;
+            obj.setState({service_response:data, later_created_property:'Orval'});
+            if(obj.servie_url == "test")
+            {
+                obj.servie_url = "/ws/test";
+            }   
+            else
+            {
+                obj.servie_url = "test";
+            }
         });
     }
 
     simplefun = function(){      
-      return "This is simple JS function result";
+      return "I am returned by a simple JS function";
     }
 
     render(){
@@ -35,7 +49,9 @@ import { render } from 'react-dom';
           <div>Property of class not chnagable by setstate {this.mahi}</div>
           <div>{this.simplefun()}</div>
           <div>later_created_property_in_state :{this.state.later_created_property}</div>
-          <div>Property of state : {this.state.locs}</div>
+          <div>Property of state :     
+              <span className="service-result">{this.state.service_response}</span>              
+          </div>
         </div>
       );
     }      

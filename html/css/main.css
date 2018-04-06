@@ -2358,3 +2358,8 @@ ul{
     color: cadetblue;
     padding: 10px;
 }
+.service-result
+{
+    color: green;
+    font-weight:bold;
+}
