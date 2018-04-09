@@ -1,9 +1,22 @@
 import React from 'react';
 import { Link, Router, Route } from 'react-router-dom';
 
+var base_url = window.location.origin+"/assets/";
+
   function had() {
     return (
-        <div className="header-main">
+        <div className="header-main">            
+            <link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
+            <link rel="stylesheet" type="text/css" href={base_url + "vendor/bootstrap/css/bootstrap.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "fonts/font-awesome-4.7.0/css/font-awesome.min.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "vendor/animate/animate.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "vendor/css-hamburgers/hamburgers.min.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "vendor/animsition/css/animsition.min.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "vendor/select2/select2.min.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "vendor/slick/slick.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "css/util.css"} />
+            <link rel="stylesheet" type="text/css" href={base_url + "css/main.css"} />
+
             <div className="container-menu-header">
                 <div className="topbar">
                     <div className="topbar-social">
@@ -35,26 +48,31 @@ import { Link, Router, Route } from 'react-router-dom';
                 <div className="wrap_header">
                     
                     <Link to="/" className="logo">
-                        <img src="images/icons/logo.png" alt="IMG-LOGO" />
+                        <img src={base_url + "images/icons/logo.png"} alt="IMG-LOGO" />
                     </Link>
 
                     
                     <div className="wrap_menu">
                         <nav className="menu">
-                            <ul className="main_menu"><li><Link to="/">Home</Link></li><li><Link to="/about">About with funny</Link></li><li><Link to="/aboutclass">About with Calss</Link></li><li><Link to="/topics">Topics</Link></li></ul>
+                            <ul className="main_menu">
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/about">About with funny</Link></li>
+                                <li><Link to="/aboutclass">About with Calss</Link></li>
+                                <li><Link to="/topics">Topics</Link></li>
+                            </ul>
                         </nav>
                     </div>
 
                     
                     <div className="header-icons">
                         <Link to="#" className="header-wrapicon1 dis-block">
-                            <img src="images/icons/icon-header-01.png" className="header-icon1" alt="ICON" />
+                            <img src={base_url + "images/icons/icon-header-01.png"} className="header-icon1" alt="ICON" />
                         </Link>
 
                         <span className="linedivide1"></span>
 
                         <div className="header-wrapicon2">
-                            <img src="images/icons/icon-header-02.png" className="header-icon1 js-show-header-dropdown" alt="ICON" />
+                            <img src={base_url + "images/icons/icon-header-02.png"} className="header-icon1 js-show-header-dropdown" alt="ICON" />
                             <span className="header-icons-noti">0</span>
 
                             
@@ -62,7 +80,7 @@ import { Link, Router, Route } from 'react-router-dom';
                                 <ul className="header-cart-wrapitem">
                                     <li className="header-cart-item">
                                         <div className="header-cart-item-img">
-                                            <img src="images/icons/icon-header-01.png" alt="IMG" />
+                                            <img src={base_url + "images/icons/icon-header-01.png"} alt="IMG" />
                                         </div>
 
                                         <div className="header-cart-item-txt">
@@ -78,7 +96,7 @@ import { Link, Router, Route } from 'react-router-dom';
 
                                     <li className="header-cart-item">
                                         <div className="header-cart-item-img">
-                                            <img src="images/icons/icon-header-01.png" alt="IMG" />
+                                            <img src={base_url + "images/icons/icon-header-01.png"} alt="IMG" />
                                         </div>
 
                                         <div className="header-cart-item-txt">
@@ -94,7 +112,7 @@ import { Link, Router, Route } from 'react-router-dom';
 
                                     <li className="header-cart-item">
                                         <div className="header-cart-item-img">
-                                            <img src="images/icons/icon-header-01.png" alt="IMG" />
+                                            <img src={base_url + "images/icons/icon-header-01.png"} alt="IMG" />
                                         </div>
 
                                         <div className="header-cart-item-txt">
@@ -140,7 +158,7 @@ import { Link, Router, Route } from 'react-router-dom';
             <div className="wrap_header_mobile">
                 
                 <Link to="/" className="logo-mobile">
-                    <img src="images/icons/logo.png" alt="IMG-LOGO" />
+                    <img src={base_url + "images/icons/logo.png"} alt="IMG-LOGO" />
                 </Link>
 
                 
@@ -148,13 +166,13 @@ import { Link, Router, Route } from 'react-router-dom';
                     
                     <div className="header-icons-mobile">
                         <Link to="#" className="header-wrapicon1 dis-block">
-                            <img src="images/icons/icon-header-01.png" className="header-icon1" alt="ICON" />
+                            <img src={base_url + "images/icons/icon-header-01.png"} className="header-icon1" alt="ICON" />
                         </Link>
 
                         <span className="linedivide2"></span>
 
                         <div className="header-wrapicon2">
-                            <img src="images/icons/icon-header-02.png" className="header-icon1 js-show-header-dropdown" alt="ICON" />
+                            <img src={base_url + "images/icons/icon-header-02.png"} className="header-icon1 js-show-header-dropdown" alt="ICON" />
                             <span className="header-icons-noti">0</span>
 
                             
@@ -162,7 +180,7 @@ import { Link, Router, Route } from 'react-router-dom';
                                 <ul className="header-cart-wrapitem">
                                     <li className="header-cart-item">
                                         <div className="header-cart-item-img">
-                                            <img src="images/icons/icon-header-01.png" alt="IMG" />
+                                            <img src={base_url + "images/icons/icon-header-01.png"} alt="IMG" />
                                         </div>
 
                                         <div className="header-cart-item-txt">
@@ -178,7 +196,7 @@ import { Link, Router, Route } from 'react-router-dom';
 
                                     <li className="header-cart-item">
                                         <div className="header-cart-item-img">
-                                            <img src="images/icons/icon-header-01.png" alt="IMG" />
+                                            <img src={base_url + "images/icons/icon-header-01.png"} alt="IMG" />
                                         </div>
 
                                         <div className="header-cart-item-txt">
@@ -194,7 +212,7 @@ import { Link, Router, Route } from 'react-router-dom';
 
                                     <li className="header-cart-item">
                                         <div className="header-cart-item-img">
-                                            <img src="images/icons/icon-header-01.png" alt="IMG" />
+                                            <img src={base_url + "images/icons/icon-header-01.png"} alt="IMG" />
                                         </div>
 
                                         <div className="header-cart-item-txt">

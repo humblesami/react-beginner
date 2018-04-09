@@ -1,8 +1,12 @@
+
 var ws_config = {
     server_base_url: undefined,
     login_url:'/ws/login',
     session_id:false
 };
+
+ws_config.server_base_url = 'http://localhost:8000';
+
 function ws_request(request_url,request_data, cb) {
     var api_url = false;
     if(request_url=='test')
@@ -83,3 +87,5 @@ function send_request(api_url, dataToSend, cb)
         }
     });
 }
+
+export default ws_request;

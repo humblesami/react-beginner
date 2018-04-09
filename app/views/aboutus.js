@@ -1,6 +1,7 @@
 import React from 'react';
 import Component from 'react';
 import { render } from 'react-dom';
+import ws_request from '../service';
   
   const about1 = () => (
     <h1>About with const_keyword, auto returing html</h1>
@@ -16,7 +17,7 @@ import { render } from 'react-dom';
     }
      
     onItemClick = (e) => {
-        var obj = this; 
+        var obj = this;
         
         ws_request(obj.servie_url,{},function(data){  
             if(data.results)

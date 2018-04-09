@@ -1,5 +1,5 @@
 import React from 'react';
-
+var base_url = window.location.origin+"/assets/";
   function foot() {
     return (
         <div className="footer-main bg6 p-l-45 p-r-45">
@@ -11,7 +11,8 @@ import React from 'react';
 
                     <div>
                         <p className="s-text7 w-size27">
-                            Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                            Any questions? Let us know in store at 8th floor,
+                             379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
                         </p>
 
                         <div className="flex-m p-t-30">
@@ -136,30 +137,29 @@ import React from 'react';
                                 Subscribe
                             </button>
                         </div>
-
                     </form>
                 </div>
             </div>
 
             <div className="t-center p-l-15 p-r-15">
                 <a href="#">
-                    <img className="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL" />
+                    <img className="h-size2" src={base_url + "images/icons/paypal.png"} alt="IMG-PAYPAL" />
                 </a>
 
                 <a href="#">
-                    <img className="h-size2" src="images/icons/visa.png" alt="IMG-VISA" />
+                    <img className="h-size2" src={base_url + "images/icons/paypal.png"} alt="IMG-VISA" />
                 </a>
 
                 <a href="#">
-                    <img className="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD" />
+                    <img className="h-size2" src={base_url + "images/icons/paypal.png"} alt="IMG-MASTERCARD" />
                 </a>
 
                 <a href="#">
-                    <img className="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS" />
+                    <img className="h-size2" src={base_url + "images/icons/paypal.png"} alt="IMG-EXPRESS" />
                 </a>
 
                 <a href="#">
-                    <img className="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER" />
+                    <img className="h-size2" src={base_url + "images/icons/discover.png"} alt="IMG-DISCOVER" />
                 </a>
 
                 <div className="t-center s-text8 p-t-20">
