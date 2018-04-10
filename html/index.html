@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactJS Routoa</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var base_url = window.location.origin + "";
+        function loadScriptFile(src, elementId, atroot)
+        {
+            var node = document.createElement('script');
+            if(!atroot)
+                node.src = base_url + '/assets/' + src;
+            else
+                node.src = base_url + '/' + src;
+            addNewNode(node, elementId);
+        }   
+            
+        function loadLinkFile(src, elementId, nodetype)
+        {
+            var node = document.createElement('link');  
+            if (!nodetype)         
+            {
+                node.rel = "stylesheet";
+                node.type="text/css";
+            }
+            else if(nodetype == "icon")
+            {
+                node.rel = nodetype;
+                node.type="image/png";
+            }
+            else if(nodetype == "font")
+            {
+                node.rel = "stylesheet";
+                node.type="text/html";
+            }
+            node.href = base_url + '/assets/' + src;
+            addNewNode(node, elementId);
+        }
+        function addNewNode(node, elementId)
+        {
+            node.async = false; 
+            if(elementId)
+            { 
+                if(elementId == 'head')
+                    document.head.appendChild(node);
+                else
+                {
+                    var referenceNode = document.getElementById(elementId);
+                    insertAfter(node, referenceNode);
+                }
+            }
+            else
+            {
+                document.body.appendChild(node);
+            }
+        }
+        function insertAfter(newNode, referenceNode) {
+            referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+        }
+    </script>
+    
+    
+</head>
+<body>
+    <script>
+        loadLinkFile('icons/favicon.png','head', 'icon');
+        loadScriptFile('jquery-3.3.1.js','head');
+        loadLinkFile('vendor/bootstrap/css/bootstrap.css','head');
+        loadLinkFile('font-awesome-4.7.0/css/font-awesome.min.css','head', 'font');
+        loadLinkFile('vendor/css-hamburgers/hamburgers.min.css','head');
+        loadLinkFile('vendor/animsition/css/animsition.min.css','head');
+        loadLinkFile('vendor/select2/select2.min.css','head');
+        loadLinkFile('vendor/slick/slick.css','head');
+        loadLinkFile('css/util.css','head');
+        loadLinkFile('css/main.css','head');
+    </script>
+    <div id="react_dom_container">        
+        Loding...
+    </div>       
+    <script>
+        loadScriptFile('bundle.js', false, "load at root");
+        //loadScriptFile('vendor/animsition/js/animsition.min.js');
+        loadScriptFile('vendor/bootstrap/js/popper.js');
+        loadScriptFile('vendor/bootstrap/js/bootstrap.min.js');
+        loadScriptFile('vendor/select2/select2.min.js');
+        loadScriptFile('js/main.js');
+        loadScriptFile('js/custom.js');
+        
+    </script>
+</body>
+</html>
