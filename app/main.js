@@ -60,5 +60,5 @@ var react_components_container = document.getElementById('react_dom_container');
         var fh = $('.footer-main').height();
         var mh = wh - hh - fh;
         //console.log(wh,hh,fh,mh);
-        $('.page-wrapper-main').css('min-height',mh-10);
+        $('.page-wrapper-main').css('min-height',mh);
     });

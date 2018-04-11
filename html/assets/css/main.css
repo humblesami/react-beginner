@@ -2363,10 +2363,10 @@ button
     background-color: cadetblue;
     color: white;
 }
-a:hover{
-    color: white !important;
-    background: green;    
+li>a:hover{
+    background:gainsboro;    
+    /* text-decoration: none !important; */
 }
-a{
+li>a{
     padding: 5px !important;
 }

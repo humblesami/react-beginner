@@ -12,6 +12,7 @@ const config = {
   },
 
   devServer: {    
+    port: 8008,
     contentBase: __dirname + '/html',
     historyApiFallback: true    
   },
