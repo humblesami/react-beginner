@@ -11,9 +11,9 @@ const config = {
     filename: 'bundle.js'
   },
 
-  devServer: {
+  devServer: {    
     contentBase: __dirname + '/html',
-    historyApiFallback: true
+    historyApiFallback: true    
   },
 
   module: {
